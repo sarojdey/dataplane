@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { AuthContext } from "./AuthContext";
 axios.defaults.withCredentials = true;
-const API_URL = "http://localhost:3000/api/auth";
+const API_URL = "https://dataplane-api.onrender.com/api/auth";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
