@@ -1,6 +1,9 @@
 import axios from "axios";
 
-const BASE_URL = "https://dataplane-api.onrender.com/api";
+const BASE_URL =
+  import.meta.env.VITE_STATUS === "production"
+    ? import.meta.env.VITE_API_URL
+    : "http://localhost:3000/api";
 
 axios.defaults.headers.common["Content-Type"] = "application/json";
 axios.defaults.withCredentials = true;
