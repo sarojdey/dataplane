@@ -317,6 +317,7 @@ const CaseDetails = () => {
 
             <Collapse in={showEditor} timeout="auto" unmountOnExit>
               <form
+                id="casedetails"
                 onSubmit={handleCommentSubmit}
                 style={{ width: "100%", marginBottom: "2rem" }}
               >

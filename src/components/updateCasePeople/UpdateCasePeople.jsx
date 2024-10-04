@@ -95,7 +95,7 @@ const UpdateCasePeople = ({
       flexDirection="column"
       borderRadius={1}
     >
-      <form onSubmit={handleSubmit}>
+      <form id="updatecase people" onSubmit={handleSubmit}>
         <FormControl fullWidth>
           <FormControl fullWidth>
             <Box

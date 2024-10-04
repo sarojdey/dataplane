@@ -51,7 +51,11 @@ const UpdateCaseDescription = ({
   };
 
   return (
-    <form style={{ marginTop: "1rem" }} onSubmit={handleSubmit}>
+    <form
+      id="caseupdatedescription"
+      style={{ marginTop: "1rem" }}
+      onSubmit={handleSubmit}
+    >
       <FormControl fullWidth>
         <FormControl fullWidth>
           <Box

@@ -119,7 +119,7 @@ const CreateNewCase = () => {
         <Box
           sx={{ width: "85%", margin: "auto", paddingRight: { md: "2rem" } }}
         >
-          <form onSubmit={handleSubmit}>
+          <form id="createnewcase" onSubmit={handleSubmit}>
             <FormControl fullWidth>
               <FormControl fullWidth>
                 <Box
