@@ -83,7 +83,13 @@ function MyProfile() {
             Edit
           </ButtonPrimary>
         ) : (
-          <Box>
+          <Box
+            sx={{
+              display: "flex",
+              gap: 1,
+              flexDirection: { xs: "column", md: "row" },
+            }}
+          >
             <ButtonPrimary
               onButtonClick={() => {
                 handleSave();
@@ -149,23 +155,25 @@ const UserCard = ({ user }) => {
       borderRadius={5}
       sx={{
         width: "100%",
-        padding: "2rem",
+        padding: { xs: "0.5rem", md: "2rem" },
         display: "flex",
         backgroundColor: "white",
         border: "solid 1px #d6d6d6",
         marginBottom: "1rem",
+        alignItems: "center",
       }}
     >
       <Box
-        width={100}
-        height={100}
         borderRadius={"100%"}
         sx={{
+          height: { xs: "4rem", md: "5rem" },
+          width: { xs: "4rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
-          marginRight: "1.5rem",
+          marginRight: { xs: "0.5rem", md: "1.5rem" },
+          flexShrink: 0,
         }}
       >
         <img
@@ -182,9 +190,8 @@ const UserCard = ({ user }) => {
         }}
       >
         <Typography
-          fontSize={20}
           fontWeight={500}
-          sx={{ marginBottom: "0.1rem" }}
+          sx={{ marginBottom: "0.1rem", fontSize: { xs: "18px", md: "20px" } }}
         >
           {user.firstName && user.lastName
             ? `${user.firstName} ${user.lastName}`
@@ -233,7 +240,14 @@ const PersonalInfo = ({ user }) => {
         >
           Personal Information
         </Typography>
-        <Box sx={{ width: "100%", display: "flex", marginTop: "1rem" }}>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            marginTop: "1rem",
+          }}
+        >
           <Box sx={{ minWidth: "25rem" }}>
             <UserInfo
               label={"First Name"}
@@ -286,7 +300,14 @@ const Address = ({ user }) => {
         >
           Address
         </Typography>
-        <Box sx={{ width: "100%", display: "flex", marginTop: "1rem" }}>
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            marginTop: "1rem",
+          }}
+        >
           <Box sx={{ minWidth: "25rem" }}>
             <UserInfo
               label={"Country"}

@@ -102,7 +102,7 @@ const SignUp = () => {
       >
         <Box
           sx={{
-            maxWidth: "450px",
+            minWidth: { xs: "90%", sm: "350px" },
             padding: "2rem",
             backgroundColor: "#ffff",
             border: "solid 1px #d6d6d6",
@@ -126,7 +126,10 @@ const SignUp = () => {
             sx={{ fontSize: "2.8rem", fontWeight: "600" }}
             gutterBottom
           >
-            Welcome to <span style={{ color: "green" }}>DataPlane.</span>
+            Welcome to <br />
+            <span style={{ color: "green", fontSize: "2.8rem" }}>
+              DataPlane.
+            </span>
           </Typography>
           <Divider></Divider>
           <Typography

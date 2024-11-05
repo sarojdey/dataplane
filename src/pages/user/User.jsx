@@ -6,7 +6,6 @@ const User = () => {
   const [selectedSection, setSelectedSection] = useState("My Profile");
   return (
     <Box
-      margin={5}
       borderRadius={5}
       sx={{
         backgroundColor: "#f8f8f8",
@@ -14,6 +13,7 @@ const User = () => {
         minHeight: "100vh",
         display: "flex",
         overflow: "hidden",
+        margin: { xs: "1rem", md: "2rem" },
       }}
     >
       <Box
@@ -21,6 +21,7 @@ const User = () => {
           width: "20rem",
           borderRight: "solid 1px #d6d6d6",
           padding: "2rem",
+          display: { xs: "none", md: "block" },
         }}
       >
         <Button
@@ -147,7 +148,7 @@ const User = () => {
           </Typography>
         </Button>
       </Box>
-      <Box sx={{ width: "100%", padding: "2rem" }}>
+      <Box sx={{ width: "100%", padding: { xs: "1.2rem", md: "2rem" } }}>
         <MyProfile />
       </Box>
     </Box>

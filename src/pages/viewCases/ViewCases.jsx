@@ -59,7 +59,7 @@ const ViewCases = () => {
         style={{
           backgroundColor: "#f0f0f0",
           width: "100%",
-          height: "100vh",
+          minHeight: "70vh",
           paddingTop: "3rem",
         }}
       >
@@ -119,7 +119,7 @@ const ViewCases = () => {
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: "100vh",
+              height: "70vh",
               textAlign: "center",
               fontSize: { xs: "2.5rem", md: "4rem" },
             }}

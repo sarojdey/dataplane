@@ -1,32 +1,29 @@
 import {
   AppBar,
-  Toolbar,
+  Box,
   IconButton,
-  Stack,
   Menu,
   MenuItem,
+  Stack,
+  Toolbar,
   Typography,
-  Box,
 } from "@mui/material";
 
 import ButtonPrimary from "../buttons/ButtonPrimary";
 
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
 import LogoutIcon from "@mui/icons-material/Logout";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
-import ContactPageIcon from "@mui/icons-material/ContactPage";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import Switch from "@mui/material/Switch";
 
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Context } from "../../context/Context";
-import { useContext } from "react";
 import { useAuth } from "../../context/AuthContext";
+import { Context } from "../../context/Context";
 
 function Navbar() {
   const { logout, user } = useAuth();
-  const label = { inputProps: { "aria-label": "Switch demo" } };
-  const { isDarkModeOn, setIsDarkModeOn } = useContext(Context);
+  const { isDarkModeOn } = useContext(Context);
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -156,8 +153,8 @@ function Navbar() {
               justifyContent: "center",
               alignItems: "center",
               overflow: "hidden",
-              width: "3rem",
-              height: "3rem",
+              width: { xs: "2rem", md: "3rem" },
+              height: { xs: "2rem", md: "3rem" },
             }}
           >
             <img
@@ -183,20 +180,6 @@ function Navbar() {
               Profile
             </MenuItem>
 
-            <MenuItem
-              disableRipple={true}
-              sx={{ "&:hover": { backgroundColor: "inherit" } }}
-            >
-              <Typography sx={{ cursor: "default" }}>Switch Theme</Typography>
-              <Switch
-                onChange={() => {
-                  const current = isDarkModeOn;
-                  setIsDarkModeOn(!current);
-                }}
-                checked={isDarkModeOn}
-                {...label}
-              />
-            </MenuItem>
             <MenuItem
               disableRipple={true}
               sx={{ "&:hover": { backgroundColor: "inherit" } }}

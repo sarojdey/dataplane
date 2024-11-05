@@ -13,7 +13,7 @@ const UserDetailsUpdate = ({ userDetails, setUserDetails }) => {
         borderRadius={5}
         sx={{
           width: "100%",
-          padding: "3rem",
+          padding: { xs: "1rem", md: "3rem" },
           backgroundColor: "white",
           border: "solid 1px #d6d6d6",
         }}
@@ -21,7 +21,7 @@ const UserDetailsUpdate = ({ userDetails, setUserDetails }) => {
         <Box
           sx={{
             width: "100%",
-            height: "20rem",
+            height: { md: "20rem" },
             display: "flex",
             justifyContent: "center",
             marginBottom: "2rem",
@@ -30,13 +30,12 @@ const UserDetailsUpdate = ({ userDetails, setUserDetails }) => {
           <Box
             borderRadius={"100%"}
             sx={{
-              width: "18rem",
-              height: "18rem",
+              width: { xs: "12rem", md: "18rem" },
+              height: { xs: "12rem", md: "18rem" },
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
               overflow: "hidden",
-              marginRight: "1.5rem",
             }}
           >
             <img
@@ -48,7 +47,14 @@ const UserDetailsUpdate = ({ userDetails, setUserDetails }) => {
         </Box>
         <Avatars userDetails={userDetails} setUserDetails={setUserDetails} />
 
-        <Box display={"flex"} gap={10} sx={{ width: "100%" }}>
+        <Box
+          display={"flex"}
+          sx={{
+            gap: { md: "1rem" },
+            width: "100%",
+            flexDirection: { xs: "column", md: "row" },
+          }}
+        >
           <Box
             sx={{
               mt: 2,

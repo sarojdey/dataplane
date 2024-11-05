@@ -589,7 +589,7 @@ const CaseDetailsCard = ({
                 )}
               </Collapse>
             </Box>
-            <Box sx={{ display: "flex", flexDirection: "column" }}>
+            {/* <Box sx={{ display: "flex", flexDirection: "column" }}>
               <Box
                 sx={{
                   display: "flex",
@@ -631,7 +631,7 @@ const CaseDetailsCard = ({
                 <Typography sx={{ fontWeight: "500" }}>Attachments</Typography>
               </Box>
               {showAttachments && <Typography>ATTACHMENTS</Typography>}
-            </Box>
+            </Box> */}
           </CardContent>
         </Card>
       )}

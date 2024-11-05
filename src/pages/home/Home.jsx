@@ -1,9 +1,9 @@
-import { Typography, Box } from "@mui/material";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import { Box, Typography } from "@mui/material";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { Context } from "../../context/Context";
-import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ButtonSecondary from "../../components/buttons/ButtonSecondary";
+import { Context } from "../../context/Context";
 
 const Home = () => {
   const { isDarkModeOn } = useContext(Context);

@@ -4,20 +4,23 @@ const Avatars = ({ setUserDetails, userDetails }) => {
   return (
     <Box
       sx={{
-        height: "15rem",
+        height: { md: "10rem" },
         width: "100%",
         display: "flex",
-        justifyContent: "center",
+        justifyContent: { xs: "space-between", md: "center" },
         gap: "1",
+        overflowX: { xs: "scroll", md: "auto" },
+        marginBottom: "1rem",
       }}
     >
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",
@@ -35,10 +38,11 @@ const Avatars = ({ setUserDetails, userDetails }) => {
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",
@@ -56,10 +60,11 @@ const Avatars = ({ setUserDetails, userDetails }) => {
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",
@@ -77,10 +82,11 @@ const Avatars = ({ setUserDetails, userDetails }) => {
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",
@@ -98,10 +104,11 @@ const Avatars = ({ setUserDetails, userDetails }) => {
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",
@@ -119,10 +126,11 @@ const Avatars = ({ setUserDetails, userDetails }) => {
       <Box
         borderRadius={"100%"}
         sx={{
-          width: "8rem",
-          height: "8rem",
+          width: { xs: "3rem", md: "5rem" },
+          height: { xs: "3rem", md: "5rem" },
           display: "flex",
           justifyContent: "center",
+          flexShrink: 0,
           alignItems: "center",
           overflow: "hidden",
           marginRight: "1.5rem",

@@ -16,13 +16,12 @@ const ButtonSecondary = ({
       disableElevation
       disableRipple
       sx={{
-        width: "7rem",
         marginTop: "2rem",
         marginRight: "1rem",
         textTransform: "none",
         borderColor: `${buttonColor}.main`,
         fontWeight: "500",
-        fontSize: { xs: "14px", md: "16px" },
+        fontSize: "12px",
         "&:hover": {
           backgroundColor: `${buttonColor}.main`,
           color: "white",

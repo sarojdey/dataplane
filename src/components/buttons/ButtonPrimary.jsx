@@ -17,7 +17,7 @@ const ButtonPrimary = ({
       disableRipple
       sx={{
         fontWeight: "500",
-        fontSize: "16px",
+        fontSize: "14px",
         textTransform: "none",
         ...buttonStyles,
       }}
