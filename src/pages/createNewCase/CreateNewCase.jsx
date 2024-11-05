@@ -430,7 +430,7 @@ const CreateNewCase = () => {
                   color={"error"}
                   buttonVariant={"outlined"}
                 >
-                  Cancle
+                  Cancel
                 </ButtonSecondary>
                 <ButtonSecondary
                   buttonType={"submit"}

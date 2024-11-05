@@ -382,7 +382,7 @@ const CaseDetails = () => {
                       color="error"
                       variant="outlined"
                     >
-                      Cancle
+                      Cancel
                     </Button>
                     <Button
                       disableElevation

@@ -121,7 +121,7 @@ const UpdateCaseDescription = ({
             color="error"
             variant="outlined"
           >
-            Cancle
+            Cancel
           </Button>
           <Button
             disableElevation
