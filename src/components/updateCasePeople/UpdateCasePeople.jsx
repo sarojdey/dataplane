@@ -86,8 +86,8 @@ const UpdateCasePeople = ({
       sx={{
         width: "100%",
         margin: "auto",
-        padding: "2rem",
-        marginY: "2rem",
+        padding: "3rem",
+
         border: "solid 1px #d6d6d6",
         backgroundColor: "white",
       }}
@@ -303,13 +303,9 @@ const UpdateCasePeople = ({
                 fontSize: "16px",
                 textTransform: "none",
                 marginTop: "2rem",
-                backgroundColor: isDarkModeOn
-                  ? "var(--color-primary)"
-                  : "var(--color-secondary)",
+                backgroundColor: "var(--color-primary-darker)",
                 "&:hover": {
-                  backgroundColor: isDarkModeOn
-                    ? "var(--color-primary)"
-                    : "var(--color-secondary)",
+                  backgroundColor: "var(--color-primary)",
                 },
               }}
               type="submit"

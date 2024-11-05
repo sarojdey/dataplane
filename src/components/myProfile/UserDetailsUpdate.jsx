@@ -16,6 +16,7 @@ const UserDetailsUpdate = ({ userDetails, setUserDetails }) => {
           padding: { xs: "1rem", md: "3rem" },
           backgroundColor: "white",
           border: "solid 1px #d6d6d6",
+          color: "var(--color-bg-secondary)",
         }}
       >
         <Box

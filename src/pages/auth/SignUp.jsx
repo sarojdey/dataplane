@@ -96,13 +96,13 @@ const SignUp = () => {
           flexDirection: "column",
           alignItems: "center",
           minHeight: "100vh",
-
+          color: "black",
           backgroundColor: "whitesmoke",
         }}
       >
         <Box
           sx={{
-            minWidth: { xs: "90%", sm: "350px" },
+            width: { xs: "90%", sm: "350px" },
             padding: "2rem",
             backgroundColor: "#ffff",
             border: "solid 1px #d6d6d6",
@@ -127,7 +127,12 @@ const SignUp = () => {
             gutterBottom
           >
             Welcome to <br />
-            <span style={{ color: "green", fontSize: "2.8rem" }}>
+            <span
+              style={{
+                color: "var(--color-primary-darker)",
+                fontSize: "2.8rem",
+              }}
+            >
               DataPlane.
             </span>
           </Typography>
@@ -478,12 +483,12 @@ const SignUp = () => {
               sx={{
                 mt: 4,
                 mb: 2,
-                backgroundColor: "green",
+                backgroundColor: "var(--color-primary-darker)",
                 height: "3rem",
                 fontSize: "1rem",
                 textTransform: "none",
                 "&:hover": {
-                  backgroundColor: "#29a729",
+                  backgroundColor: "var(--color-primary)",
                 },
               }}
             >

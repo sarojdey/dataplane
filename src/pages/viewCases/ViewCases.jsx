@@ -57,10 +57,11 @@ const ViewCases = () => {
     <>
       <div
         style={{
-          backgroundColor: "#f0f0f0",
+          backgroundColor: "var(--color-bg-primary)",
           width: "100%",
-          minHeight: "70vh",
+          minHeight: "80vh",
           paddingTop: "3rem",
+          paddingBottom: "3rem",
         }}
       >
         {tableData.length > 0 ? (
@@ -68,7 +69,7 @@ const ViewCases = () => {
             style={{
               borderRadius: "5px",
               overflow: "hidden",
-              height: "80vh",
+              height: "70vh",
               width: "90%",
               margin: "auto",
             }}
@@ -82,9 +83,7 @@ const ViewCases = () => {
                 sx={{
                   backgroundColor: "white",
                   "& .MuiDataGrid-columnHeader": {
-                    backgroundColor: isDarkModeOn
-                      ? "var(--color-primary)"
-                      : "var(--color-secondary)",
+                    backgroundColor: "var(--color-primary-darker)",
                     color: "white",
                     paddingX: "2rem",
                   },

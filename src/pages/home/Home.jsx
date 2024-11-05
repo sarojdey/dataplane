@@ -1,13 +1,10 @@
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import { Box, Typography } from "@mui/material";
-import { useContext } from "react";
+import { SiAwsorganizations } from "react-icons/si";
 import { useNavigate } from "react-router-dom";
 import ButtonSecondary from "../../components/buttons/ButtonSecondary";
-import { Context } from "../../context/Context";
 
 const Home = () => {
-  const { isDarkModeOn } = useContext(Context);
-
   const navigate = useNavigate();
   return (
     <Box
@@ -15,9 +12,10 @@ const Home = () => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        height: "90vh",
+        height: "80vh",
         textAlign: "center",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
+        gap: "10rem",
       }}
       borderRadius={2}
     >
@@ -35,15 +33,16 @@ const Home = () => {
         <Typography
           sx={{
             textAlign: "left",
-            color: isDarkModeOn
-              ? "var(--color-primary)"
-              : "var(--color-secondary)",
+            color: "var(--color-secondary)",
             fontSize: { xs: "2.5rem", md: "3.5rem" },
           }}
           variant="h3"
           fontWeight="bold"
         >
-          Feedback with DataPlane.
+          Feedback with{" "}
+          <span style={{ fontSize: "inherit", color: "var(--color-primary)" }}>
+            DataPlane.
+          </span>
         </Typography>
         <Typography
           sx={{
@@ -62,7 +61,7 @@ const Home = () => {
           onButtonClick={() => {
             navigate("/putUserData");
           }}
-          buttonColor={"success"}
+          buttonColor={"var(--color-primary-darker)"}
           buttonVariant={"contained"}
           buttonStyles={{
             marginTop: { xs: "2rem", md: "3rem" },
@@ -72,12 +71,8 @@ const Home = () => {
           CREATE
         </ButtonSecondary>
       </Box>
-      <Box sx={{ width: "40%", display: { xs: "none", md: "block" } }}>
-        <img
-          src={isDarkModeOn ? "./blue.png" : "./green.png"}
-          alt="blue"
-          style={{ width: "80%" }}
-        />
+      <Box sx={{ display: { xs: "none", md: "block" } }}>
+        <SiAwsorganizations style={{ fontSize: "20rem" }} />
       </Box>
     </Box>
   );

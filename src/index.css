@@ -3,8 +3,11 @@
 :root {
   --font-primary: "Poppins", "sans-serif";
   --font-secondary: "Montserrat", "sans-serif";
-  --color-primary: #046e8c;
-  --color-secondary: #1e8e3e;
+  --color-primary: #26c399;
+  --color-primary-darker: #1f8c6f;
+  --color-secondary: rgb(202, 202, 202);
+  --color-bg-primary: #2e2e2a;
+  --color-bg-secondary: #181c14;
 }
 
 * {

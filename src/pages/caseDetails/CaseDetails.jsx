@@ -144,7 +144,7 @@ const CaseDetails = () => {
   return loading ? (
     <div
       style={{
-        height: "100vh",
+        height: "80vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -158,7 +158,7 @@ const CaseDetails = () => {
         sx={{
           paddingBottom: "1rem",
           paddingTop: "1rem",
-          backgroundColor: "#f0f0f0",
+          backgroundColor: "var(--color-bg-primary)",
         }}
       >
         <Box
@@ -238,6 +238,7 @@ const CaseDetails = () => {
                     marginLeft: "0.2rem",
                     width: "100%",
                     textAlign: "left",
+                    color: "var(--color-secondary)",
                   }}
                 >
                   Comments({issue?.comments?.length})
@@ -256,7 +257,10 @@ const CaseDetails = () => {
             </div>
           )}
 
-          <div ref={editorRef} style={{ width: "100%" }}>
+          <div
+            ref={editorRef}
+            style={{ width: "100%", borderRadius: "5px", overflow: "hidden" }}
+          >
             <Box
               onClick={() => {
                 const prev = showEditor;
@@ -389,6 +393,10 @@ const CaseDetails = () => {
                         fontSize: "16px",
                         textTransform: "none",
                         marginTop: "2rem",
+                        backgroundColor: "var(--color-primary-darker)",
+                        "&:hover": {
+                          backgroundColor: "var(--color-primary)",
+                        },
                       }}
                       type="submit"
                       variant="contained"

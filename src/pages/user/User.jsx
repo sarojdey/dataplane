@@ -6,7 +6,6 @@ const User = () => {
   const [selectedSection, setSelectedSection] = useState("My Profile");
   return (
     <Box
-      borderRadius={5}
       sx={{
         backgroundColor: "#f8f8f8",
         border: "solid 1px #d6d6d6",
@@ -14,6 +13,7 @@ const User = () => {
         display: "flex",
         overflow: "hidden",
         margin: { xs: "1rem", md: "2rem" },
+        borderRadius: "5px",
       }}
     >
       <Box
@@ -47,9 +47,9 @@ const User = () => {
             color: "gray",
             cursor: "pointer",
             ...(selectedSection === "My Profile" && {
-              backgroundColor: "#cbffcb",
+              backgroundColor: "#90ead2",
               ":hover": {
-                backgroundColor: "#cbffcb",
+                backgroundColor: "#90ead2",
               },
             }),
           }}
@@ -58,7 +58,7 @@ const User = () => {
             sx={{
               fontWeight: "600",
               ...(selectedSection === "My Profile" && {
-                color: "green",
+                color: "var(--color-primary-darker)",
               }),
             }}
           >
@@ -88,9 +88,9 @@ const User = () => {
             color: "gray",
             cursor: "pointer",
             ...(selectedSection === "Dashboard" && {
-              backgroundColor: "#cbffcb",
+              backgroundColor: "#90ead2",
               ":hover": {
-                backgroundColor: "#cbffcb",
+                backgroundColor: "#90ead2",
               },
             }),
           }}
@@ -99,7 +99,7 @@ const User = () => {
             sx={{
               fontWeight: "600",
               ...(selectedSection === "Dashboard" && {
-                color: "green",
+                color: "var(--color-primary-darker)",
               }),
             }}
           >
@@ -129,9 +129,9 @@ const User = () => {
             color: "gray",
             cursor: "pointer",
             ...(selectedSection === "Notifications" && {
-              backgroundColor: "#cbffcb",
+              backgroundColor: "#90ead2",
               ":hover": {
-                backgroundColor: "#cbffcb",
+                backgroundColor: "#90ead2",
               },
             }),
           }}
@@ -140,7 +140,7 @@ const User = () => {
             sx={{
               fontWeight: "600",
               ...(selectedSection === "Notifications" && {
-                color: "green",
+                color: "var(--color-primary-darker)",
               }),
             }}
           >

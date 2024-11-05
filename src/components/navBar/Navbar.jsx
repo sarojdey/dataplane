@@ -16,14 +16,13 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 import LogoutIcon from "@mui/icons-material/Logout";
 import TextSnippetIcon from "@mui/icons-material/TextSnippet";
 
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
-import { Context } from "../../context/Context";
 
 function Navbar() {
   const { logout, user } = useAuth();
-  const { isDarkModeOn } = useContext(Context);
+
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -41,10 +40,9 @@ function Navbar() {
 
   return (
     <AppBar
+      elevation={0}
       sx={{
-        backgroundColor: isDarkModeOn
-          ? "var(--color-primary)"
-          : "var(--color-secondary)",
+        backgroundColor: "var(--color-bg-secondary)",
       }}
       position="sticky"
     >
@@ -69,12 +67,14 @@ function Navbar() {
               sx={{
                 fontSize: { xs: "2rem", md: "2.5rem" },
                 marginRight: { sm: "0.5rem" },
+                color: "var(--color-primary)",
               }}
             />
             <Typography
               sx={{
                 fontSize: { xs: "2rem", md: "2.5rem" },
                 display: { xs: "none", sm: "block" },
+                color: "var(--color-secondary)",
               }}
               fontWeight={600}
               variant="h1"
@@ -101,10 +101,16 @@ function Navbar() {
           >
             <BusinessCenterIcon
               sx={{
+                color: "var(--color-primary)",
                 fontSize: { xs: "1.5rem", md: "1.8rem" },
               }}
             />
-            <Typography sx={{ display: { xs: "none", sm: "block" } }}>
+            <Typography
+              sx={{
+                display: { xs: "none", sm: "block" },
+                color: "var(--color-secondary)",
+              }}
+            >
               Cases
             </Typography>
           </IconButton>
@@ -126,11 +132,17 @@ function Navbar() {
           >
             <ContactPageIcon
               sx={{
+                color: "var(--color-primary)",
                 fontSize: { xs: "1.5rem", md: "1.8rem" },
               }}
             />
 
-            <Typography sx={{ display: { xs: "none", sm: "block" } }}>
+            <Typography
+              sx={{
+                display: { xs: "none", sm: "block" },
+                color: "var(--color-secondary)",
+              }}
+            >
               My Cases
             </Typography>
           </IconButton>
@@ -148,7 +160,8 @@ function Navbar() {
             onClick={handleClick}
             borderRadius={"100%"}
             sx={{
-              border: 0,
+              border: 3,
+              borderColor: "var(--color-secondary)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

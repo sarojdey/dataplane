@@ -56,13 +56,13 @@ const Comment = ({
         elevation={0}
         sx={{
           padding: "1.5rem",
-          borderRadius: "1.5rem",
+          borderRadius: "5px",
           border: "solid 1px #d6d6d6",
         }}
       >
         <Typography
           sx={{
-            color: "var(--color-secondary)",
+            color: "var(--color-primary-darker)",
             fontSize: 20,
             marginRight: "2rem",
             marginTop: "1rem",

@@ -101,7 +101,7 @@ const UpdateCaseDetails = ({
         backgroundColor: "white",
         width: "100%",
         margin: "auto",
-        marginY: "2rem",
+
         border: "solid 1px #d6d6d6",
       }}
       display="flex"
@@ -386,13 +386,9 @@ const UpdateCaseDetails = ({
                 fontSize: "16px",
                 textTransform: "none",
                 marginTop: "2rem",
-                backgroundColor: isDarkModeOn
-                  ? "var(--color-primary)"
-                  : "var(--color-secondary)",
+                backgroundColor: "var(--color-primary-darker)",
                 "&:hover": {
-                  backgroundColor: isDarkModeOn
-                    ? "var(--color-primary)"
-                    : "var(--color-secondary)",
+                  backgroundColor: "var(--color-primary)",
                 },
               }}
               type="submit"

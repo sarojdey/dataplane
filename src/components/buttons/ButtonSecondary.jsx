@@ -9,9 +9,11 @@ const ButtonSecondary = ({
   buttonStyles,
   children,
   onButtonClick,
+  color,
 }) => {
   return (
     <Button
+      color={color}
       onClick={onButtonClick}
       disableElevation
       disableRipple
@@ -19,18 +21,17 @@ const ButtonSecondary = ({
         marginTop: "2rem",
         marginRight: "1rem",
         textTransform: "none",
-        borderColor: `${buttonColor}.main`,
+        borderColor: buttonColor,
+        backgroundColor: buttonColor,
         fontWeight: "500",
         fontSize: "12px",
         "&:hover": {
-          backgroundColor: `${buttonColor}.main`,
-          color: "white",
+          backgroundColor: buttonColor,
         },
         ...buttonStyles,
       }}
       type={buttonType}
       variant={buttonVariant}
-      color={buttonColor}
       endIcon={endIcon}
       startIcon={startIcon}
     >

@@ -83,7 +83,6 @@ const CaseDetailsCard = ({
 }) => {
   const { user } = useAuth();
   const [showDescription, setShowDescription] = useState(false);
-  const [showAttachments, setShowAttachments] = useState(false);
   const [showDetails, setShowDetails] = useState(true);
   const [showPeople, setShowPeople] = useState(true);
 
@@ -96,10 +95,7 @@ const CaseDetailsCard = ({
     handleEditDescriptionClick();
     setShowDescription(true);
   };
-  const handleAttachmentsClick = () => {
-    const currentValue = showAttachments;
-    setShowAttachments(!currentValue);
-  };
+
   const handleDetailsClick = () => {
     const currentValue = showDetails;
     setShowDetails(!currentValue);
@@ -132,7 +128,7 @@ const CaseDetailsCard = ({
             transition: "all 0.3s ease-in-out",
             padding: { xs: "1rem", md: "3rem" },
             border: "solid 1px #d6d6d6",
-            borderRadius: "1.5rem",
+            borderRadius: "5px",
           }}
         >
           <Box
@@ -229,7 +225,7 @@ const CaseDetailsCard = ({
                     >
                       <FiEdit
                         style={{
-                          fontSize: "20px",
+                          fontSize: "14px",
                         }}
                       />
                     </IconButton>
@@ -381,7 +377,7 @@ const CaseDetailsCard = ({
                     >
                       <FiEdit
                         style={{
-                          fontSize: "20px",
+                          fontSize: "14px",
                         }}
                       />
                     </IconButton>
@@ -565,7 +561,7 @@ const CaseDetailsCard = ({
                   >
                     <FiEdit
                       style={{
-                        fontSize: "20px",
+                        fontSize: "14px",
                       }}
                     />
                   </IconButton>

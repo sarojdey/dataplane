@@ -1,10 +1,9 @@
-import { useState, useContext } from "react";
-import { Box, FormControl, Button } from "@mui/material";
+import { Box, Button, FormControl } from "@mui/material";
+import { useState } from "react";
 
 import { MdEditor } from "md-editor-rt";
 import "md-editor-rt/lib/style.css";
 import usePutRequest from "../../hooks/usePutRequest";
-import { Context } from "../../context/Context";
 
 const UpdateCaseDescription = ({
   caseData,
@@ -13,7 +12,6 @@ const UpdateCaseDescription = ({
   handleStopEditingDescription,
 }) => {
   const { putRequest } = usePutRequest();
-  const { isDarkModeOn } = useContext(Context);
 
   const [descriptionData, setDescriptionData] = useState(caseData?.description);
 
@@ -134,13 +132,9 @@ const UpdateCaseDescription = ({
               fontSize: "16px",
               textTransform: "none",
               marginTop: "2rem",
-              backgroundColor: isDarkModeOn
-                ? "var(--color-primary)"
-                : "var(--color-secondary)",
+              backgroundColor: "var(--color-primary-darker)",
               "&:hover": {
-                backgroundColor: isDarkModeOn
-                  ? "var(--color-primary)"
-                  : "var(--color-secondary)",
+                backgroundColor: "var(--color-primary)",
               },
             }}
             type="submit"

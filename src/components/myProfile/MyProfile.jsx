@@ -66,6 +66,7 @@ function MyProfile() {
           display: "flex",
           justifyContent: "space-between",
           marginBottom: "1rem",
+          color: "var(--color-bg-secondary)",
         }}
       >
         <Typography fontSize={25} fontWeight={600} marginBottom={2}>
@@ -161,6 +162,7 @@ const UserCard = ({ user }) => {
         border: "solid 1px #d6d6d6",
         marginBottom: "1rem",
         alignItems: "center",
+        color: "var(--color-bg-secondary)",
       }}
     >
       <Box
@@ -224,6 +226,7 @@ const PersonalInfo = ({ user }) => {
         display: "flex",
         backgroundColor: "white",
         border: "solid 1px #d6d6d6",
+        color: "var(--color-bg-secondary)",
       }}
     >
       <Box
@@ -284,6 +287,7 @@ const Address = ({ user }) => {
         display: "flex",
         backgroundColor: "white",
         border: "solid 1px #d6d6d6",
+        color: "var(--color-bg-secondary)",
       }}
     >
       <Box

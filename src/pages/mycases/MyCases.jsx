@@ -1,17 +1,17 @@
+import { Typography } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
 import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { DataGrid } from "@mui/x-data-grid";
-import { Typography } from "@mui/material";
 import { Context } from "../../context/Context";
 
-import { convertToHumanReadable } from "../../utils/dateFormat";
 import { useAuth } from "../../context/AuthContext";
+import { convertToHumanReadable } from "../../utils/dateFormat";
 
 const MyCases = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
 
-  const { data, isDarkModeOn } = useContext(Context);
+  const { data } = useContext(Context);
 
   const [tableData, setTableData] = useState([]);
 
@@ -63,10 +63,11 @@ const MyCases = () => {
     <>
       <div
         style={{
-          backgroundColor: "#f0f0f0",
+          backgroundColor: "var(--color-bg-primary)",
           width: "100%",
-          minHeight: "70vh",
+          minHeight: "80vh",
           paddingTop: "3rem",
+          paddingBottom: "3rem",
         }}
       >
         {tableData.length > 0 ? (
@@ -74,7 +75,7 @@ const MyCases = () => {
             style={{
               borderRadius: "5px",
               overflow: "hidden",
-              height: "80vh",
+              height: "70vh",
               width: "90%",
               margin: "auto",
             }}
@@ -88,9 +89,7 @@ const MyCases = () => {
                 sx={{
                   backgroundColor: "white",
                   "& .MuiDataGrid-columnHeader": {
-                    backgroundColor: isDarkModeOn
-                      ? "var(--color-primary)"
-                      : "var(--color-secondary)",
+                    backgroundColor: "var(--color-primary-darker)",
                     color: "white",
                     paddingX: "2rem",
                   },
@@ -119,9 +118,7 @@ const MyCases = () => {
             fontWeight="bold"
             color="primary"
             sx={{
-              color: isDarkModeOn
-                ? "var(--color-primary)"
-                : "var(--color-secondary)",
+              color: "var(--color-secondary)",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",

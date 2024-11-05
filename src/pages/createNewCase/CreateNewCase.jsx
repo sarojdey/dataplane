@@ -102,19 +102,24 @@ const CreateNewCase = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: "#f0f0f0", width: "100%", paddingY: "3rem" }}>
+    <Box
+      sx={{
+        backgroundColor: "var(--color-bg-primary)",
+        width: "100%",
+        paddingY: "3rem",
+      }}
+    >
       <Box
         sx={{
           backgroundColor: "white",
           width: { xs: "95%", sm: "90%", md: "80%" },
           margin: "auto",
-          padding: { xs: "1rem", md: "4rem" },
-
+          paddingY: { xs: "1.5rem", md: "4rem" },
           border: "solid 1px #d6d6d6",
+          borderRadius: "5px",
         }}
         display="flex"
         flexDirection="column"
-        borderRadius={5}
       >
         <Box
           sx={{ width: "85%", margin: "auto", paddingRight: { md: "2rem" } }}
@@ -422,14 +427,14 @@ const CreateNewCase = () => {
                   onButtonClick={() => {
                     navigate("/");
                   }}
-                  buttonColor={"error"}
+                  color={"error"}
                   buttonVariant={"outlined"}
                 >
                   Cancle
                 </ButtonSecondary>
                 <ButtonSecondary
                   buttonType={"submit"}
-                  buttonColor={"success"}
+                  buttonColor={"var(--color-primary-darker)"}
                   buttonVariant={"contained"}
                 >
                   Submit
