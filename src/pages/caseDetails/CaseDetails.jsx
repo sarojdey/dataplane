@@ -39,7 +39,7 @@ const CaseDetails = () => {
   const [isEditingPeople, setIsEditingPeople] = useState(false);
 
   const [issue, setIssue] = useState(null);
-  const ticketId = rowData._id;
+  const ticketId = rowData?._id;
   const { postRequest } = usePostRequest();
 
   const [commentContent, setCommentContent] = useState("");
@@ -103,7 +103,7 @@ const CaseDetails = () => {
     if (!isEditing) {
       try {
         const response = await postRequest(`/comments/addComment/${ticketId}`, {
-          userId: user._id,
+          userId: user?._id,
           content: commentContent,
         });
 
@@ -125,7 +125,7 @@ const CaseDetails = () => {
         const response = await putRequest(
           `/comments/updateComment/${ticketId}/${commentId}`,
           {
-            userId: user._id,
+            userId: user?._id,
             content: commentContent,
           }
         );
