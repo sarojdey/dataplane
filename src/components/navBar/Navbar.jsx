@@ -106,7 +106,6 @@ function Navbar() {
             />
             <Typography
               sx={{
-                display: { xs: "none", sm: "block" },
                 color: "var(--color-secondary)",
               }}
             >
@@ -138,7 +137,6 @@ function Navbar() {
 
             <Typography
               sx={{
-                display: { xs: "none", sm: "block" },
                 color: "var(--color-secondary)",
               }}
             >
