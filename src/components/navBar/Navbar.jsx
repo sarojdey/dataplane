@@ -66,7 +66,7 @@ function Navbar() {
             <TextSnippetIcon
               sx={{
                 fontSize: { xs: "2rem", md: "2.5rem" },
-                marginRight: { sm: "0.5rem" },
+                marginRight: { xs: "0.2rem", sm: "0.5rem" },
                 color: "var(--color-primary)",
               }}
             />
