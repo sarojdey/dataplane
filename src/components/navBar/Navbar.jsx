@@ -73,7 +73,6 @@ function Navbar() {
             <Typography
               sx={{
                 fontSize: { xs: "2rem", md: "2.5rem" },
-                display: { xs: "none", sm: "block" },
                 color: "var(--color-secondary)",
               }}
               fontWeight={600}
