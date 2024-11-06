@@ -156,7 +156,7 @@ const UserCard = ({ user }) => {
       borderRadius={5}
       sx={{
         width: "100%",
-        padding: { xs: "0.5rem", md: "2rem" },
+        padding: { xs: "1rem", md: "2rem" },
         display: "flex",
         backgroundColor: "white",
         border: "solid 1px #d6d6d6",
@@ -174,7 +174,7 @@ const UserCard = ({ user }) => {
           justifyContent: "center",
           alignItems: "center",
           overflow: "hidden",
-          marginRight: { xs: "0.5rem", md: "1.5rem" },
+          marginRight: { xs: "1rem", md: "1.5rem" },
           flexShrink: 0,
         }}
       >
